@@ -44,3 +44,6 @@
 /* Clear, consistent label typography */
 .description-content{background:#fff}.product-description summary{background:#f5f8f1}.label-row{padding:16px 0;border-bottom:1px solid #edf0e9}.label-row:last-child{border-bottom:0;padding-bottom:0}.label-row dt{font-size:13px;font-weight:600;line-height:1.7}.label-row dd{line-height:1.75;max-width:62ch}.label-intro{color:#365236}.product-description{box-shadow:0 3px 14px #36523606}.label-section h3{padding-bottom:6px}
 @media(max-width:760px){.label-row{padding:14px 0;gap:5px}.product-description summary small{font-size:12px}.description-content{padding-bottom:18px}}
+
+/* Consistent square photos in product dialogs, matching catalogue cards. */
+.product-detail .detail-photo{display:block;width:100%;height:auto;aspect-ratio:1 / 1;max-height:none;object-fit:cover;object-position:center;align-self:start}
