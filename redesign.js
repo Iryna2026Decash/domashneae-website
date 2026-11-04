@@ -86,7 +86,10 @@ dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){const wasOpen=!$('#collection-options').hidden;closeCategories();if(wasOpen)$('.collection-toggle').focus();}if(event.key==='Tab'&&overlay.classList.contains('visible')){const nodes=[...sheet.querySelectorAll('button,input,textarea,a')].filter(n=>n.getClientRects().length&&!n.disabled);const first=nodes[0],last=nodes[nodes.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}});
 $('#about-dialog').querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const key=({'#sourdough-bread':'bread','#broths':'broths','#sauerkraut':'sauerkraut','#sauces-and-borshch':'sauces'})[a.getAttribute('href')];if(key){filter=key;favoriteOnly=false;query='';$('#shop-search').value='';renderProducts()}}));
 renderChrome();updateBar();
-if (new URLSearchParams(window.location.search).get('product') === 'ube-sourdough') {
-  showDetail(13);
+const productParameter = new URLSearchParams(window.location.search).get('product');
+const linkedProductId = productParameter === 'ube-sourdough' ? 13 : Number(productParameter);
+if (items.some(item => item.id === linkedProductId)) {
+  if (linkedProductId === 52) selectedJar = 52;
+  showDetail(linkedProductId);
 }
 });
