@@ -208,4 +208,17 @@ aboutDialog.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener
 let saved='en';try{saved=localStorage.getItem('domashne-language')||'en'}catch{}setLanguage(translations[saved]?saved:'en');
 });
 
-</script><script src="redesign.js"></script></body></html>
+</script><script src="redesign.js"></script>
+<script>
+const ubeOrderUrl = new URL(window.location.href);
+const ubeQuantity = ubeOrderUrl.searchParams.get('add-ube');
+if (ubeQuantity !== null) {
+  ubeOrderUrl.searchParams.delete('add-ube');
+  history.replaceState(history.state, '', ubeOrderUrl);
+  if (/^[1-9][0-9]?$/.test(ubeQuantity)) {
+    changeQty(13, Number(ubeQuantity));
+    openCart();
+  }
+}
+</script>
+</body></html>
