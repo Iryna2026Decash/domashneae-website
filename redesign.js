@@ -22,7 +22,7 @@ const wheat='<img class="brand-wheat" src="brand-wheat.png" alt="" width="48" he
 const $=s=>document.querySelector(s), e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const c=k=>copy[currentLanguage][k];const icons={cart:'f105',heart:'f106',search:'f130',categories:'f15a',close:'f112',shop:'f146'};
 const icon=k=>`<i class="ic" aria-hidden="true">&#x${icons[k]};</i>`;
-const customerPhotos={30:'plum-corrected',44:'broth-3l',8:'date-pecan',20:'shakshuka',31:'apricot-jam',32:'peach-jam',9:'apple-cinnamon',12:'berries-bread',29:'apple-jam',45:'broth-5l',48:'liver-spread',50:'liver-spread-5days'};
+const customerPhotos={51:'tushonka',30:'plum-corrected',44:'broth-3l',8:'date-pecan',20:'shakshuka',31:'apricot-jam',32:'peach-jam',9:'apple-cinnamon',12:'berries-bread',29:'apple-jam',45:'broth-5l',48:'liver-spread',50:'liver-spread-5days'};
 const photo=i=>customerPhotos[i.id]?`product-photos/${customerPhotos[i.id]}.jpg`:photoMap[i.id]?`assets/products/${photoMap[i.id]}.webp`:null;
 let filter='all',query='',sorting='default',favoriteOnly=false,detailId=null,lastFocus=null,favorites=new Set();
 try{favorites=new Set(JSON.parse(localStorage.getItem('domashne-favorites')||'[]'))}catch{}
