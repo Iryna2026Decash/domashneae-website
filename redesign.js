@@ -27,6 +27,10 @@ items.push({id:55,name:'Sourdough Bread Starter',price:60});
 productTranslations.uk[54]='Закваска для хліба';
 productTranslations.ru[54]='Закваска для хлеба';
 const starterQuantity=document.createElement('span');starterQuantity.id='q55';starterQuantity.hidden=true;document.body.append(starterQuantity);
+// Chicken broth: owner-confirmed 1 L portion, price and photo.
+Object.assign(items.find(i=>i.id===35),{name:'Chicken Broth (1 L)',price:60});
+productTranslations.uk[34]='Курячий бульйон (1 л)';
+productTranslations.ru[34]='Куриный бульон (1 л)';
 let selectedJar=15;
 const catalogItems=()=>items.filter(i=>i.id!==52);
 const jarCopy={en:{label:'Jar size',small:'Small jar · 42 AED',large:'Large jar · 52 AED'},ru:{label:'Размер банки',small:'Маленькая · 42 AED',large:'Большая · 52 AED'},uk:{label:'Розмір банки',small:'Мала · 42 AED',large:'Велика · 52 AED'}};
@@ -41,7 +45,7 @@ const wheat='<img class="brand-wheat" src="brand-wheat.png" alt="" width="48" he
 const $=s=>document.querySelector(s), e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const c=k=>copy[currentLanguage][k];const icons={cart:'f105',heart:'f106',search:'f130',categories:'f15a',close:'f112',shop:'f146'};
 const icon=k=>`<i class="ic" aria-hidden="true">&#x${icons[k]};</i>`;
-const customerPhotos={55:'sourdough-starter',54:'beef-chicken-broth-set',40:'sochniki',51:'tushonka',30:'plum-corrected',44:'broth-3l',8:'date-pecan',20:'shakshuka',31:'apricot-jam',32:'peach-jam',9:'apple-cinnamon',12:'berries-bread',29:'apple-jam',45:'broth-5l',48:'liver-spread',50:'liver-spread-5days'};
+const customerPhotos={35:'chicken-broth-1l',55:'sourdough-starter',54:'beef-chicken-broth-set',40:'sochniki',51:'tushonka',30:'plum-corrected',44:'broth-3l',8:'date-pecan',20:'shakshuka',31:'apricot-jam',32:'peach-jam',9:'apple-cinnamon',12:'berries-bread',29:'apple-jam',45:'broth-5l',48:'liver-spread',50:'liver-spread-5days'};
 const photo=i=>customerPhotos[i.id]?`product-photos/${customerPhotos[i.id]}.jpg`:photoMap[i.id]?`assets/products/${photoMap[i.id]}.webp`:null;
 let filter='all',query='',sorting='default',favoriteOnly=false,detailId=null,lastFocus=null,favorites=new Set();
 try{favorites=new Set(JSON.parse(localStorage.getItem('domashne-favorites')||'[]'))}catch{}
