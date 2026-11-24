@@ -51,4 +51,4 @@
 /* Keep the liver spread jar visible in the Living Solo set photo. */
 .product-photo img[src*="living-solo-set"],
 .product-detail .detail-photo[src*="living-solo-set"],
-.cart-line img[src*="living-solo-set"]{object-position:center bottom}
+.cart-line img[src*="living-solo-set"]{object-position:center 60%}
