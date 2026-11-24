@@ -42,9 +42,9 @@ productTranslations.uk[56]='КОМБО — Грузинська аджика + �
 productTranslations.ru[56]='КОМБО — Грузинская аджика + холодец';
 const ajikaComboQuantity=document.createElement('span');ajikaComboQuantity.id='q57';ajikaComboQuantity.hidden=true;document.body.append(ajikaComboQuantity);
 // Living Solo set: owner-confirmed contents and delivery-inclusive price.
-items.push({id:58,name:'Living Solo. Eating Well. — Bread, Spread & Broth Set',price:140,deliveryIncluded:true});
-productTranslations.uk[57]='Набір для себе — хліб, паштет і бульйон';
-productTranslations.ru[57]='Набор для себя — хлеб, паштет и бульон';
+items.push({id:58,name:'Combo Deal — Living Solo. Eating Well. — Bread, Spread & Broth',price:140,deliveryIncluded:true});
+productTranslations.uk[57]='Комбо-набір для себе — хліб, паштет і бульйон';
+productTranslations.ru[57]='Комбо-набор для себя — хлеб, паштет и бульон';
 const soloQuantity=document.createElement('span');soloQuantity.id='q58';soloQuantity.hidden=true;document.body.append(soloQuantity);
 let selectedJar=15;
 const catalogItems=()=>items.filter(i=>i.id!==52);
