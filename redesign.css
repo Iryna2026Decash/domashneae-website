@@ -52,3 +52,7 @@
 .product-photo img[src*="living-solo-set"],
 .product-detail .detail-photo[src*="living-solo-set"],
 .cart-line img[src*="living-solo-set"]{object-position:center 60%}
+
+/* Delivery-inclusive products carry a photo badge, matching NEW. */
+.product-delivery-badge{position:absolute;bottom:9px;left:9px;z-index:2;background:var(--green);color:#fff;border-radius:20px;font:10px/1.3 Arial,sans-serif;letter-spacing:.04em;padding:6px 10px;pointer-events:none}
+@media(max-width:760px){.product-delivery-badge{bottom:7px;left:7px;font-size:9px;padding:5px 7px}}
