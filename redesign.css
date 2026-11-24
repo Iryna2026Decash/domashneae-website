@@ -48,9 +48,7 @@
 /* Consistent square photos in product dialogs, matching catalogue cards. */
 .product-detail .detail-photo{display:block;width:100%;height:auto;aspect-ratio:1 / 1;max-height:none;object-fit:cover;object-position:center;align-self:start}
 
-/* Portrait framing keeps bread, broth and the complete spread jar together. */
-.product-photo:has(img[src*="living-solo-set"]){aspect-ratio:3 / 4}
+/* Match the catalogue's square format while keeping the complete jar visible. */
 .product-photo img[src*="living-solo-set"],
-.product-detail .detail-photo[src*="living-solo-set"]{object-position:center 35%}
-.product-detail .detail-photo[src*="living-solo-set"]{aspect-ratio:3 / 4}
+.product-detail .detail-photo[src*="living-solo-set"],
 .cart-line img[src*="living-solo-set"]{object-position:center 60%}
