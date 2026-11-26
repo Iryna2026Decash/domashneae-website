@@ -17,8 +17,8 @@ const zaatarQuantity=document.createElement('span');zaatarQuantity.id='q53';zaat
 Object.assign(items.find(i=>i.id===40),{name:'Sochniki (6 pieces)',price:70});
 productTranslations.uk[39]='Сочники (6 шт.)';
 productTranslations.ru[39]='Сочники (6 шт.)';
-// Beef and chicken broth set: owner-supplied price; 1 L each on package labels.
-items.push({id:54,name:'Beef Bone Broth + Chicken Broth (1 L each)',price:110});
+// Beef and chicken broth set: 1 L each, with delivery included.
+items.push({id:54,name:'Beef Bone Broth + Chicken Broth (1 L each)',price:135,deliveryIncluded:true});
 productTranslations.uk[53]='Яловичий кістковий бульйон + курячий бульйон (по 1 л)';
 productTranslations.ru[53]='Говяжий костный бульон + куриный бульон (по 1 л)';
 const brothSetQuantity=document.createElement('span');brothSetQuantity.id='q54';brothSetQuantity.hidden=true;document.body.append(brothSetQuantity);
